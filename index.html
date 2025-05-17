@@ -51,7 +51,7 @@
         display: block;
         position: relative;
         margin: -10em auto 0 auto;
-        filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.3));
+        filter: drop-shadow(0 0 20px rgba(128, 124, 5, 0.521));
       }
 
       .cake {
@@ -126,7 +126,7 @@
         }
         50% {
           background: rgba(255, 50, 0, 0.1);
-          box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+          box-shadow: 0 0 40px 20px rgba(216, 137, 10, 0.621);
           transform: translateY(-20px) scale(0);
         }
       }
@@ -192,10 +192,44 @@
           opacity: 0;
         }
       }
+
+      .cake-container {
+        position: relative;
+        width: 200px; /* match SVG width */
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .candles {
+        position: absolute;
+        top: 30px; /* adjust as needed to sit above the cake */
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between; /* or center, or use gap */
+        pointer-events: none;
+        z-index: 2;
+      }
+
+      .candle {
+        position: relative;
+        width: 5px;
+        height: 35px;
+        background: #fff;
+        border-radius: 10px;
+        /* Remove any left: XX% */
+        /* Optionally add margin for spacing */
+      }
     </style>
   </head>
   <body>
     <div class="particles" id="particles"></div>
+    <div class="cake-container">
+      <div class="candles">
+        <div class="candle">
+          <div class="fuego"></div>
     <div class="cake">
       <div class="fuego"></div>
       <div class="fuego"></div>
